@@ -19,12 +19,12 @@ class UserController extends AbstractController {
 
         $params = $this->request->getParams();
 
-        if (!$params->has('name')) {
-			$params = ['errorMessage' => 'Name not provided.'];
+        if (!$params->has('username')) {
+			$params = ['errorMessage' => 'Username not provided.'];
 			return $this->render('register.twig', $params);
 		}
 
-        $name = $params->getString('name');
+        $username = $params->getString('username');
 
         if (!$params->has('email')) {
 			$params = ['errorMessage' => 'No email provided.'];
@@ -40,7 +40,7 @@ class UserController extends AbstractController {
 
         $password = $params->getString('password');
 
-        $newUser = UserFactory::factory($name, $email, $password);
+        $newUser = UserFactory::factory($username, $email, $password);
 
         $userModel = new UserModel($this->db);
 
@@ -85,7 +85,7 @@ class UserController extends AbstractController {
         $userModel = new UserModel($this->db);
 
 		try {
-			$user = $userModel->getUserByEmlAndPswd($email, $password);
+			$user = $userModel->getUserByEmAndPw($email, $password);
 		} catch (\Exception $e) {
 			$this->log->warn('No such user: ' . $email . ', ' . $password);
 			$params = ['errorMessage' => 'No such user.'];

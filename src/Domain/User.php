@@ -33,8 +33,8 @@ class User {
 		$this->id = $id;
 	}
 
-	public function setUsername(string $name) {
-		$this->name = $username;
+	public function setUsername(string $username) {
+		$this->username = $username;
 	}
 
 	public function setEmail(string $email) {
