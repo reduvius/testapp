@@ -1,12 +1,12 @@
 // Validate registration form
 function validateForm() {
-    var name = document.forms["reg"]["name"].value;
+    var username = document.forms["reg"]["username"].value;
     var email = document.forms["reg"]["email"].value;
     var password = document.forms["reg"]["password"].value;
     var password_confirm = document.forms["reg"]["password_confirm"].value;
     var val_info = document.getElementById("val-info");
 
-    if (name == "") {
+    if (username == "") {
         val_info.innerHTML = "Username must be filled out.";
         return false;
     }
