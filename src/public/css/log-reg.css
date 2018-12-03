@@ -1,0 +1,88 @@
+/* ----------------- FORM ELEMENT --------------- */
+#main #container {
+    border: 2px solid rgba(54, 69, 79, 0.1);
+    border-bottom: none;
+    border-radius: 0.4em;
+    margin: 5% 0% 5% 0%;
+    min-width: 31em;
+}
+
+#main #container h1 {
+    text-align: center;
+    padding: 4% 0%;
+}
+
+#main #container div {
+    padding: 2% 5% 0% 5%;
+}
+
+#main #container div p {
+    text-align: center;
+}
+
+#main #container #err {
+    color: white;
+    background-color: #e0301e;
+    padding: 1%;
+    margin-top: 2%;
+    border-radius: 0.4em;
+}
+
+#main #container #val-info {
+    color: #e0301e;
+    font-weight: bold;
+}
+
+#main #container form {
+    padding: 0% 5% 0% 5%;
+}
+
+#main #container form input:not([type=submit]) {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #333333;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0.4em;
+    box-sizing: border-box;
+    margin: 6px 0 16px 0;
+    transition: 0.5s;
+}
+
+#main #container form input:not([type=submit]):focus {
+    border: 1px solid #5bc0de;
+}
+
+#main #container hr {
+    border: 1px solid rgba(54, 69, 79, 0.1);
+    margin-bottom: 25px;
+}
+
+#main #container form input[type=submit] {
+    background-color: inherit;;
+    color: #4CAF50;
+    width: 100%;
+    padding: 1em 1.8em;
+    border: 2px solid #ccc;
+    border-radius: 0.4em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#main #container form input[type=submit]:hover {
+    background-color: #45a049;
+    color: white;
+    border: 2px solid #45a049;
+}
+
+#main #container a {
+    color: #1e90ff;
+}
+
+#main #container #bt {
+    background: rgba(54, 69, 79, 0.1);
+    text-align: center;
+    padding: 3% 2% 3% 2%;
+    margin-top: 6%;
+    border-radius: 0 0 0.4em 0.4em;
+}
