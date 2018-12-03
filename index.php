@@ -15,7 +15,7 @@ $dbConfig = $config->get('db');
 
 // PHP Data Objects (PDO)
 $db = new PDO(
-    'mysql:host=127.0.0.1;dbname=myblog',
+    'mysql:host=127.0.0.1;dbname=testapp',
     $dbConfig['user'],
     $dbConfig['password']
 );
@@ -25,7 +25,7 @@ $loader = new Twig_Loader_Filesystem(__DIR__ . '/src/views');
 $view = new Twig_Environment($loader);
 
 // Monolog logging system
-$log = new Logger('myblog');
+$log = new Logger('testapp');
 $logFile = $config->get('log');
 $log->pushHandler(new StreamHandler($logFile, Logger::DEBUG));
 

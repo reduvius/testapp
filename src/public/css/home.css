@@ -1,0 +1,12 @@
+@media only screen and (max-width: 768px) {
+    #main div:first-child {
+        display: none;
+    }
+    #main div:last-child {
+        margin-top: 5%;
+    }
+}
+
+#main {
+    margin: 2.5em 2em;
+}
