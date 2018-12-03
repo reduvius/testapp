@@ -179,20 +179,6 @@ nav .trigram {
     .topnav.responsive form button:hover {
         background: #111;
     }
-    /* DROPDOWN */
-    .topnav.responsive .dropdown {float: none;}
-    .topnav.responsive .dropdown-content {
-        position: relative;
-        background-color: #555555;
-    }
-    .topnav.responsive .dropdown-content a {
-        padding-left: 2em;
-    }
-    .topnav.responsive .dropdown .dropbtn {
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
 }
 
 /* **************************** CONTENT BLOCK *************************** */
@@ -300,12 +286,10 @@ footer #r-footer a i {
     padding: 0.1em;
     margin: 0.9em 0.3em;
     font-size: 1.6em;
-    width: 2.1em;
-    height: 2.1em;
     text-align: center;
     transition: 0.4s;
 }
 
 footer #r-footer a i.fa-github:hover {
-
+    opacity: 0.7;
 }

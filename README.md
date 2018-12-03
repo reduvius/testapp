@@ -1,10 +1,12 @@
 # testapp
 This is just a test app.
 
+Warning: this app is tested in Firefox browser. Some elements may not be displayed properly inside other browsers!
+
 --------------------------
 Installation instructions:
 --------------------------
-- Clone the repository inside application folder within your virtual machine:
+- Clone the repository inside the application folder within your virtual machine:
       
         git clone https://github.com/reduvius/testapp.git
 
