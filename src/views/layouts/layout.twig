@@ -42,21 +42,9 @@
             <!-- RIGHT -->
             <div class="r-nav">
                 {% if isAuth %}
-                    <!-- DROPDOWN: USER -->
-                    <div class="dropdown" id="ddn3">
-                        <button class="dropbtn">
-                            <i class='fas fa-user'></i>
-                            <i class='fas fa-caret-down'></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="/profile">
-                                <i class='fas fa-id-card'></i> My Profile
-                            </a>
-                            <a href="/logout">
-                                <i class='fas fa-sign-out-alt'></i> Sign out
-                            </a>
-                        </div>
-                    </div>
+                    <a href="/logout">
+                        <i class='fas fa-sign-out-alt'></i> Sign out
+                    </a>
                 {% else %}
                     <a href="/register/get-form">
                         <i class='fas fa-user-plus'></i> Sign up
