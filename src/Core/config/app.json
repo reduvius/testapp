@@ -1,0 +1,7 @@
+{
+  "db": {
+    "user": "phplay",
+    "password": "zx"
+  },
+  "log": "/vagrant/application/testapp/src/var/log/testapp.log"
+}

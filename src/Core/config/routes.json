@@ -1,0 +1,26 @@
+{
+  "": {
+    "controller": "Home",
+  	"method": "getHomePage"
+  },
+  "register/get-form": {
+    "controller": "User",
+	"method": "getRegisterForm"
+  },
+  "register": {
+    "controller": "User",
+	"method": "register"
+  },
+  "login/get-form": {
+    "controller": "User",
+	"method": "getLoginForm"
+  },
+  "login": {
+    "controller": "User",
+	"method": "login"
+  },
+  "logout": {
+    "controller": "User",
+	"method": "logout"
+  }
+}
