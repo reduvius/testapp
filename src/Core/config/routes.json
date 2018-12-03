@@ -22,5 +22,10 @@
   "logout": {
     "controller": "User",
 	"method": "logout"
+  },
+  "search": {
+    "controller": "User",
+	"method": "search",
+    "login": true
   }
 }

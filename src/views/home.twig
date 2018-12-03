@@ -14,7 +14,7 @@
         {% if isAuth and user.id == uId %}
             <h1>Welcome, {{ user.username }}!</h1>
         {% else %}
-            <h1>Welcome!</h1>
+            <h1>Welcome to my test app!</h1>
         {% endif %}
     </div>
     <div class="col-4">
@@ -25,6 +25,8 @@
                 <p><i class='fas fa-user'></i> Username: {{ user.username }}</p>
                 <hr>
                 <p><i class='fas fa-envelope'></i> Email: {{ user.email }}</p>
+                <hr>
+                <p><i class='far fa-id-card'></i> User Id: {{ user.id }}</p>
                 <hr>
                 <p>
                     <i class='fas fa-calendar-check'></i>

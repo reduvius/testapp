@@ -1,0 +1,40 @@
+{% extends 'layouts/layout.twig' %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/src/public/css/results.css" />
+{% endblock %}
+
+{% block content %}
+
+    <div class="col-3 col-s-1"></div>
+    <div class="col-6 col-s-10">
+        {% if errorMessage is defined %}
+            <h1 id="err"><strong>{{ errorMessage }}</strong></h1>
+        {% else %}
+            <table id="users">
+                <tr>
+                    <th><i class='fas fa-user'></i> Username</th>
+                    <th><i class='fas fa-envelope'></i> Email</th>
+                    <th><i class='fas fa-calendar-check'></i> Joined</th>
+                </tr>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.date }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    </div>
+    <div class="col-3 col-s-1"></div>
+
+{% endblock %}
+
+{% block js %}
+    <script src="/src/public/js/results.js"></script>
+{% endblock %}

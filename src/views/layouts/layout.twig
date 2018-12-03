@@ -28,14 +28,11 @@
         <nav class="topnav" id="myTopnav">
             <!-- LEFT -->
             <a href="/"><i class='fas fa-home'></i></a>
-            {% if isAuth %}
-
-            {% endif %}
             <!-- SEARCH -->
             <div class="l-nav search-container">
                 <form action="/search" method="get">
-                    <input type="search" placeholder="Search by title"
-                        name="title">
+                    <input type="search" placeholder="Search for users"
+                        name="username">
                     <button type="submit"><i class='fas fa-search'></i></button>
                 </form>
             </div>

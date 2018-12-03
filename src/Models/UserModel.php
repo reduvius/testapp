@@ -58,6 +58,27 @@ SQL;
 			throw new \Exception($sth->errorInfo()[2]);
 		}
 	}
+
+	// Search for users by username
+	public function search(string $username): array {
+		$query = <<<SQL
+SELECT id, date, username, email
+FROM user
+WHERE username LIKE :username
+ORDER BY username
+SQL;
+		$sth = $this->db->prepare($query);
+		$sth->bindValue('username', "%$username%");
+		$sth->execute();
+
+		$users = $sth->fetchAll(PDO::FETCH_CLASS, self::CLASSNAME);
+
+		if (empty($users)) {
+			throw new \Exception('Nothing found.');
+		}
+
+		return $users;
+	}
 }
 
 ?>

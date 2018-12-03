@@ -297,9 +297,9 @@ footer #r-footer a {
 }
 
 footer #r-footer a i {
-    padding: 0.5em;
-    margin: 1.4em 0.3em;
-    font-size: 1.1em;
+    padding: 0.1em;
+    margin: 0.9em 0.3em;
+    font-size: 1.6em;
     width: 2.1em;
     height: 2.1em;
     text-align: center;
@@ -307,5 +307,5 @@ footer #r-footer a i {
 }
 
 footer #r-footer a i.fa-github:hover {
-    
+
 }

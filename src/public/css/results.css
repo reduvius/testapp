@@ -1,0 +1,36 @@
+#err {
+    text-align: center;
+    padding: 20% 0%;
+}
+
+#users {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+	margin-top: 5%;
+}
+
+#users td, #users th {
+    border: 1px solid rgba(54, 69, 79, 0.2);
+    padding: 8px;
+}
+
+#users tr:nth-child(odd){
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+#users tr {
+	transition: 0.5s;
+}
+
+#users tr:hover {
+	background-color: rgba(54, 69, 79, 0.1);
+}
+
+#users th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #5cb85c;
+    color: white;
+}

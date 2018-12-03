@@ -106,6 +106,30 @@ class UserController extends AbstractController {
         header('Location: /');
     }
 
+    // Search for users by username
+	public function search(): string {
+		$username = $this->request->getParams()->getString('username');
+
+		$userModel = new UserModel($this->db);
+
+		try {
+			$users = $userModel->search($username);
+		} catch (\Exception $e) {
+			$params = [
+				'errorMessage' => $e->getMessage(),
+				'isAuth' => $this->isAuthenticated()
+			];
+			return $this->render('results.twig', $params);
+		}
+
+		$properties = [
+			'users' => $users,
+			'isAuth' => $this->isAuthenticated(),
+			'uId' => $this->returnUserCookie()
+		];
+		return $this->render('results.twig', $properties);
+	}
+
 }
 
 ?>
