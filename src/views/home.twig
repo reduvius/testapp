@@ -9,32 +9,39 @@
 {% endblock %}
 
 {% block content %}
-    <div class="col-4"></div>
-    <div class="col-4">
+    <div class="col-3"></div>
+    <div class="col-6">
         {% if isAuth and user.id == uId %}
             <h1>Welcome, {{ user.username }}!</h1>
         {% else %}
             <h1>Welcome to my test app!</h1>
         {% endif %}
-    </div>
-    <div class="col-4">
+
         {% if isAuth and user.id == uId %}
             <!-- PROFILE SECTION -->
             <div id="section">
-                <h2>User info:</h2>
-                <p><i class='fas fa-user'></i> Username: {{ user.username }}</p>
-                <hr>
-                <p><i class='fas fa-envelope'></i> Email: {{ user.email }}</p>
-                <hr>
-                <p><i class='far fa-id-card'></i> User Id: {{ user.id }}</p>
-                <hr>
-                <p>
-                    <i class='fas fa-calendar-check'></i>
-                     Joined: {{ user.date }}
-                </p>
-        </div>
+                <h2 id="show">Show user info ▾</h2>
+                <div id="stats">
+                    <p>
+                        <i class='fas fa-user'></i> Username: {{ user.username }}
+                    </p>
+                    <hr>
+                    <p>
+                        <i class='fas fa-envelope'></i> Email: {{ user.email }}
+                    </p>
+                    <hr>
+                    <p><i class='far fa-id-card'></i> User Id: {{ user.id }}</p>
+                    <hr>
+                    <p>
+                        <i class='fas fa-calendar-check'></i>
+                        Joined: {{ user.date }}
+                    </p>
+                </div>
+            </div>
         {% endif %}
     </div>
+    <div class="col-3"></div>
+
 {% endblock %}
 
 {% block js %}

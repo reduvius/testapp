@@ -2,17 +2,31 @@
     margin: 2.5em 2em;
 }
 
+#main h1 {
+    margin-top: 17%;
+    text-align: center;
+}
+
 #main #section {
 	border-radius: 0.4em;
 	border: 2px solid rgba(54, 69, 79, 0.1);
-
     padding: 3% 7%;
-    margin: 5% 0% 5% 0%;
+    margin: 10% 0% 5% 0%;
 	min-width: 20em;
 }
 
+#main #section #show:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#main #section #stats {
+	display: none;
+	padding: 1% 0% 0% 5%;
+	font-size: 0.9em;
+}
+
 #main #section h2 {
-    padding-bottom: 1em;
     text-align: center;
 }
 
@@ -21,13 +35,12 @@
     margin-bottom: 25px;
 }
 
-#main h1 {
-    text-align: center;
-    margin-top: 25%;
-}
-
 @media only screen and (max-width: 1080px) {
     #main h1 {
         margin-top: 2%;
+        text-align: center;
+    }
+    #main #section {
+        margin-top: 10%;
     }
 }
