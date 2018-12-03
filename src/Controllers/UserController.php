@@ -108,6 +108,14 @@ class UserController extends AbstractController {
 
     // Search for users by username
 	public function search(): string {
+        if (!$this->isAuthenticated()) {
+            $params = [
+    			'loginMessage' => 'Please Sign In.',
+    		    'isAuth' => $this->isAuthenticated()
+    		];
+    		return $this->render('login.twig', $params);
+        }
+
 		$username = $this->request->getParams()->getString('username');
 
 		$userModel = new UserModel($this->db);

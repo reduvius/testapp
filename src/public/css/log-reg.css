@@ -1,3 +1,35 @@
+/* ---------------- LOGIN MESSAGE --------------- */
+#main #logme {
+    padding: 0% 2%;
+    border-radius: 0.4em;
+    margin: 5% 0%;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: 0.5s;
+    text-align: center;
+    min-width: 34.3em;
+}
+
+#main #logme span {
+    float: right;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 3%;
+}
+
+#main #logme {
+    color: #e0301e;
+    border: 3px solid #e0301e;
+}
+
+#main #logme:hover {
+    border: 3px solid #990000;
+}
+
+#main #logme span:hover {
+    color: #990000;
+}
+
 /* ----------------- FORM ELEMENT --------------- */
 #main #container {
     border: 2px solid rgba(54, 69, 79, 0.1);

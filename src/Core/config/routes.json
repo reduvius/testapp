@@ -25,7 +25,6 @@
   },
   "search": {
     "controller": "User",
-	"method": "search",
-    "login": true
+	"method": "search"
   }
 }

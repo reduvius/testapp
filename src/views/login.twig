@@ -11,6 +11,13 @@
 {% block content %}
     <div class="col-4 col-s-3"></div>
     <div class="col-4 col-s-6">
+        <!-- Login message -->
+        {% if loginMessage is defined %}
+            <div id="logme">
+                <p>{{ loginMessage }}<span title="Close">&#10006;</span></p>
+            </div>
+        {% endif %}
+
         <!-- FORM ELEMENT -->
         <div id="container">
             <div>

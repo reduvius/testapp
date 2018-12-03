@@ -1,3 +1,10 @@
+// Close login message
+$(document).ready(function() {
+    $("#logme p span").click(function() {
+        $("#logme").hide();
+    });
+});
+
 // Validate login form
 function validateForm() {
     var email = document.forms["login"]["email"].value;
