@@ -1,12 +1,27 @@
-@media only screen and (max-width: 768px) {
-    #main div:first-child {
-        display: none;
-    }
-    #main div:last-child {
-        margin-top: 5%;
-    }
-}
 
 #main {
     margin: 2.5em 2em;
+}
+
+#main #section {
+	border-radius: 0.4em;
+	border: 2px solid rgba(54, 69, 79, 0.1);
+
+    padding: 3% 7%;
+    margin: 5% 0% 5% 0%;
+	min-width: 20em;
+}
+
+#main #section h2 {
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+#main #section hr {
+    border: 1px solid rgba(54, 69, 79, 0.1);
+    margin-bottom: 25px;
+}
+
+#main h1 {
+    text-align: center;
 }

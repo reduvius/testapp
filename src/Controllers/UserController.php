@@ -4,6 +4,7 @@ namespace Testapp\Controllers;
 
 use Testapp\Models\UserModel;
 use Testapp\Domain\User\UserFactory;
+use Testapp\Controllers\HomeController;
 
 class UserController extends AbstractController {
     // Get registration form
@@ -88,7 +89,7 @@ class UserController extends AbstractController {
 			$user = $userModel->getUserByEmAndPw($email, $password);
 		} catch (\Exception $e) {
 			$this->log->warn('No such user: ' . $email . ', ' . $password);
-			$params = ['errorMessage' => 'No such user.'];
+			$params = ['errorMessage' => 'Error logging you in.'];
 			return $this->render('login.twig', $params);
 		}
 
@@ -96,9 +97,6 @@ class UserController extends AbstractController {
 
         // The header() function sends a raw HTTP header to a client.
         header('Location: /');
-
-        $newController = new PostController($this->di, $this->request);
-		return $newController->getPostsByUser();
     }
 
     // Logout
@@ -106,9 +104,6 @@ class UserController extends AbstractController {
         setcookie('user', "", time()-3600);
 
         header('Location: /');
-
-        $newController = new PostController($this->di, $this->request);
-		return $newController->getAllPosts();
     }
 
 }

@@ -13,7 +13,7 @@ class User {
 		return $this->id;
 	}
 
-	public function getDate(): int {
+	public function getDate(): string {
 		return $this->date;
 	}
 
